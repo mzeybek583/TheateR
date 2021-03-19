@@ -1,0 +1,2 @@
+# TheateR
+Amphitheater geometry extraction
