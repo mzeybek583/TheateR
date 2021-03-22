@@ -83,6 +83,7 @@ ggplot(residuals, aes(x=c.dists.)) +
 
 
 # Statistical Analysis ----------------------------------------------------
+# reference: https://www.webassign.net/question_assets/unccolphysmechl1/measurements/manual.html
 # Relative Error
 # Residual/mean(expected)
 RE <- sum(residuals)/R
