@@ -1,8 +1,8 @@
 
 # Code: Dr. Mustafa ZEYBEK
 
-# CircleFitByKasa
-# Date: 22.03.2021
+# CircleFitByLandau
+# Date: 18.04.2021
 
 # Load Library ------------------------------------------------------------
 
@@ -30,7 +30,7 @@ xy.min2 <- round(min(xy[,2]))[1]
 xy[,1] <-xy[,1]-xy.min1 
 xy[,2] <-xy[,2]-xy.min2 
 
-c3 <- CircleFitByKasa(xy)
+c3 <- CircleFitByLandau(xy)
 center <- data.frame(c3[1]+xy.min1, c3[2]+xy.min2)
 R <- c3[3]
 colnames(center) <- c("x", "y")
@@ -79,7 +79,7 @@ ggplot(residuals, aes(x=c.dists.)) +
   ylab("Density") + xlab("Residuals [m]")+
   geom_density(alpha=.2, fill="#FF6666") +
   geom_vline(aes(xintercept=mean(c.dists.)),
-               color="blue", linetype="dashed", size=1.5)
+             color="blue", linetype="dashed", size=1.5)
 
 
 # Statistical Analysis ----------------------------------------------------
